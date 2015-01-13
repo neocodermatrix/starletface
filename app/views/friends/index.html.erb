@@ -1,0 +1,15 @@
+<h1> Friend's page</h1>
+<ul>
+	<% @friends.each do |f| %>
+	<li>
+		<%= link_to f.fullname, friend_path(f) %><br>
+		<%= f.address %><br>
+		<%= f.city %>, <%= f.state %>  <%= f.zip %><br>
+		<%= f.email %><br>
+		<br>
+
+	</li>
+	<% end %>
+</ul>
+
+<%= link_to "Add New Friend", new_friend_path %>

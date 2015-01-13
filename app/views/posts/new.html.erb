@@ -1,0 +1,19 @@
+<h1>Add a new blog post</h1>
+
+<%= form_for [@user, @post], url: user_posts_path do |p| %>
+<%#= form_for @post, url: user_post_path(@user.id) do |p| %>
+	<div>
+		<%= p.label :title, "Title" %>
+		<%= p.text_field :title %>
+	</div>
+
+	<div>
+		<%= p.text_area :body %>
+	</div>
+
+	<%= p.submit "Add this blog post" %>
+
+<% end %>
+
+<%= link_to "Post Home", user_posts_path(@user) %>
+

@@ -1,0 +1,13 @@
+<h1>Welcome to <%= @friend.fullname %>'s Page</h1>
+
+<ul>
+	<li>
+		<%= @friend.fullname %><br>
+		<%= @friend.address %><br>
+		<%= @friend.city %><br>
+		<%= @friend.state %><br>
+		<%= @friend.zip %><br>
+	</li>
+</ul>
+
+<%= link_to "Home", friends_path %>
