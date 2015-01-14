@@ -1,5 +1,6 @@
 <%#= render 'layouts/nav' %>
 <div class="margin">
+	<div class="show">
 <h1> Welcome to <%= @user.firstname %>'s page</h1>
 <H2>Here are my info:</H2>
 
@@ -22,4 +23,5 @@
 <%= link_to "Post", user_posts_path(@user) %>
 <%= link_to "Edit", edit_user_path %>
 <%#= link_to "Delete User", :user, method: :delete, data: {confirm: "Are you sure?" } %>
+</div>
 </div>
