@@ -1,7 +1,8 @@
+<div class="index">
 <h1>table</h1>
 
-<%= render 'layouts/nav' %>
-<%= @time %>
+<%#= render 'layouts/nav' %>
+<%#= @time %>
 <%# if(current_user) %>
 	<%#= current_user.firstname %>
 <%# end %>
@@ -16,7 +17,7 @@
 <div class="index">
 <ul>
 	<% @users.each do |u| %>
-	<li style="list-style: none">
+	<li class="list">
 		<%= link_to image_tag u.image.url(:thumb)%>
 		<%= link_to u.fullname, user_path(u) %>
 <!-- 		<%#= u.address %><br>
@@ -34,6 +35,7 @@
 </div>
 <br>
 <%#= link_to "Post", posts_path %>
-<%= link_to "TTT", "https://myttt.firebaseapp.com/", data: { confirm: "Are you sure?" } %>
+<%= link_to "Incredible Fun", "https://myttt.firebaseapp.com/", data: { confirm: "Are you sure?" } %>
+</div>
 <%#= link_to 'Log Out', logout_path, method: :delete %>
 <%#= @time %>
