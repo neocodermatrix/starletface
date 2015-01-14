@@ -3,6 +3,7 @@
 	<%= current_user.firstname %>
 <% end %>
 
+
 <% if logged_in? %>
   Logged in as: <%= current_user.firstname %> <%= link_to 'Log Out', logout_path, method: :delete %>
 <% else %>
