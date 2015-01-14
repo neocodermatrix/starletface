@@ -16,7 +16,7 @@
 <div class="index">
 <ul>
 	<% @users.each do |u| %>
-	<li>
+	<li style="list-style: none">
 		<%= link_to image_tag u.image.url(:thumb)%>
 		<%= link_to u.fullname, user_path(u) %>
 <!-- 		<%#= u.address %><br>
