@@ -26,7 +26,7 @@
 .nav{
 	border: 1px solid black;
 	padding: 10px;
-	background-color: #0DECFF;
+	background-color: #FFCA7E;
 }
 
 .comment{
@@ -35,3 +35,26 @@
 	margin-left: 5px;
 	width: 30%;
 }
+
+.fun {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.homenav {
+	float: left;
+	font-size: 16px;
+}
+
+.lognav{
+	float: right;
+	font-size: 16px;
+}
+
+.lognav2{
+	float: right;
+	margin-right: 10px;
+	font-size: 16px;
+}
+
+
