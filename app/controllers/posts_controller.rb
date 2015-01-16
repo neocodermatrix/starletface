@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   	#@posts = Post.all
     @user = User.find(params[:user_id])
     @posts = @user.posts
-    #Error when @posts was before @user.  Switching them @user post, now user is defined for @post=@user.posts
+    #Order matters.  Error when @posts was before @user.  Switching them @user post, now user is defined for @post=@user.posts
   end
 
   def show
