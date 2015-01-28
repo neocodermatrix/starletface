@@ -42,7 +42,7 @@ class User
     if (!self.friends.include? friend.id)
         self.push(friends: friend.id)
         self.save
-    # self refers to the instatiation of class User
+   
         friend.push(friends: self.id)
         friend.save
     else
@@ -56,9 +56,6 @@ class User
 
   
 end
-# def friend?
-#   self.
-# end
 
 
 

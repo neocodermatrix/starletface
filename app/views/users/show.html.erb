@@ -1,27 +1,20 @@
-<%#= render 'layouts/nav' %>
 <div class="margin">
 	<div class="show">
 <h1> Welcome to <%= @user.firstname %>'s page</h1>
 <H2>Here are my info:</H2>
 
-		<%= image_tag(@user.image_url) %><br>
+		<%= image_tag(@user.image_url(:full)) %><br>
 		<%= @user.firstname %> <%= @user.lastname %><br>
 		<%= @user.address %><br>
 		<%= @user.city %>, <%= @user.state %>  <%= @user.zip %><br>
 		<%= @user.email %><br>
-		<%# @user.posts.each do |up|  %>
 			<div>
-				<%#= link_to user_posts_path(@user) %>
 			</div>
-			<%# end %>
-		<%#= image_tag u.image.url %>
-		<%#= image_tag u.image.url(:thumb) %>
+
 		<br>
 
 		
-<%#= link_to "Home", users_path %>
 <%= link_to "Post", user_posts_path(@user) %>
 <%= link_to "Edit", edit_user_path %>
-<%#= link_to "Delete User", :user, method: :delete, data: {confirm: "Are you sure?" } %>
 </div>
 </div>
