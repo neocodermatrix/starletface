@@ -1,20 +1,18 @@
 <div class="margin">
-<h1>StarFace</h1>
-<p>Where The Stars And The Wannabe Stars Meet To Show Their Pretty, Handsome Faces And Post About Their Useless ***t!</p>
+	<h1>StarFace</h1>
+	<p>Where The Stars And The Wannabe Stars Meet To Show Their Pretty, Handsome Faces And Post About Their Useless ***t!</p>
 
 
-<div class="index">
-<ul>
-	<% @users.each do |u| %>
-	<li class="list">
-		<%= link_to image_tag u.image.url(:thumb)%>
-		<%= link_to u.fullname, user_path(u) %>
-
-
-	</li>
-
-	<% end %>
-</ul>
+		<div class="index">
+			<ul>
+				<% @users.each do |u| %>
+					<li class="list">
+						<%= link_to image_tag u.image.url(:thumb)%>
+						<%= link_to u.fullname, user_path(u) %>
+					</li>
+				<% end %>
+			</ul>
+		</div>
 
 <br>
 

@@ -1,52 +1,52 @@
 <div class="margin"><h1>Edit User</h1>
 
-<ul>
-<% @user.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-<% end %>
-</ul>
+	<ul>
+		<% @user.errors.full_messages.each do |msg| %>
+		    <li><%= msg %></li>
+		<% end %>
+	</ul>
 
-<%= form_for @user do |u| %>
+	<%= form_for @user do |u| %>
 
-	<div>
-		<%= u.label :firstname, "First Name:" %>
-		<%= u.text_field :firstname %>
-	</div>
+		<div>
+			<%= u.label :firstname, "First Name:" %>
+			<%= u.text_field :firstname %>
+		</div>
 
-	<div>
-		<%= u.label :lastname, "Last Name:" %>
-		<%= u.text_field :lastname %>
-	</div>
+		<div>
+			<%= u.label :lastname, "Last Name:" %>
+			<%= u.text_field :lastname %>
+		</div>
 
-	<div>
-		<%= u.label :email, "Email:" %>
-		<%= u.text_field :email %>
-	</div>
+		<div>
+			<%= u.label :email, "Email:" %>
+			<%= u.text_field :email %>
+		</div>
 
-	<div>
-		<%= u.label :address, "Address:" %>
-		<%= u.text_field :address %>
-	</div>
+		<div>
+			<%= u.label :address, "Address:" %>
+			<%= u.text_field :address %>
+		</div>
 
-	<div>
-		<%= u.label :city, "City:" %>
-		<%= u.text_field :city %>
-	</div>
+		<div>
+			<%= u.label :city, "City:" %>
+			<%= u.text_field :city %>
+		</div>
 
-	<div>
-		<%= u.label :state, "State:" %>
-		<%= u.text_field :state %>
-	</div>
+		<div>
+			<%= u.label :state, "State:" %>
+			<%= u.text_field :state %>
+		</div>
 
-	<div>
-		<%= u.label :zip, "Zip:" %>
-		<%= u.text_field :zip %>
-	</div>
+		<div>
+			<%= u.label :zip, "Zip:" %>
+			<%= u.text_field :zip %>
+		</div>
 
-	<%= u.submit "Submit Change" %><br><br>
+		<%= u.submit "Submit Change" %><br><br>
 
-	<%= link_to "Delete this user", :user, method: :delete, data: {confirm: "Are you sure?"} %>
-	
-<% end %>
+		<%= link_to "Delete this user", :user, method: :delete, data: {confirm: "Are you sure?"} %>
+		
+	<% end %>
 
 </div>

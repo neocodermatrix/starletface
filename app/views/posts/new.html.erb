@@ -1,20 +1,21 @@
 <div class="margin">
-<h1>Add a new blog post</h1>
+	<h1>Add a new blog post</h1>
 
-<%= form_for [@user, @post], url: user_posts_path do |p| %>
-	<div>
-		<%= p.label :title, "Title" %>
-		<%= p.text_field :title %>
-	</div>
+		<%= form_for [@user, @post], url: user_posts_path do |p| %>
+			
+			<div>
+				<%= p.label :title, "Title" %>
+				<%= p.text_field :title %>
+			</div>
 
-	<div>
-		<%= p.text_area :body %>
-	</div>
+			<div>
+				<%= p.text_area :body %>
+			</div>
 
-	<%= p.submit "Add this blog post" %>
+			<%= p.submit "Add this blog post" %>
 
-<% end %>
+		<% end %>
 
-<%= link_to "Post", user_posts_path(@user) %>
+		<%= link_to "Post", user_posts_path(@user) %>
 
 </div>

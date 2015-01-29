@@ -1,18 +1,18 @@
 <div class="margin">
 
-<h1>My Awesome Blog Posts</h1>
+	<h1>My Awesome Blog Posts</h1>
 
-<% @posts.each do |post| %>
-	<div>
-		<%= link_to post.title, user_post_path(@user, post) %>
-	</div>
-<% end %>
-<br>
+		<% @posts.each do |post| %>
+			<div>
+				<%= link_to post.title, user_post_path(@user, post) %>
+			</div>
+		<% end %>
+	<br>
+		<% if current_user == @user %>
+		<%= link_to "Add New Post", new_user_post_path(@user) %>
+		<% end %>
 
-<%= link_to "Add New Post", new_user_post_path(@user) %>
-
-
-<br>
-<br>
+	<br>
+	<br>
 
 </div>

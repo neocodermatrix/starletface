@@ -1,36 +1,38 @@
 <div class="margin">
-<header>
-	<h1><%= @post.title %></h1> 
-	<h5>Post on <%= @post.date_published %></h5>
-</header>
 
-<article>
-	<p><%= @post.body %></p>
-</article>
+	<header>
+		<h1><%= @post.title %></h1> 
+		<h5>Post on <%= @post.date_published %></h5>
+	</header>
 
-<section class="comment">
-	<h3>Comments</h3>
-		<div>
-			<% @post.comments.each do |c| %>
-				<div>
-					<p><%= c.body %> (added: <%= c.date_added %>)</p>
-				</div>
-			<% end %>
-		</div>
-</section>
+	<article>
+		<p><%= @post.body %></p>
+	</article>
 
-<section>
-	<h3>Add a new comment</h3>
-	<%= form_for [@post.user, @post, @comment] do |f| %>
-		<div>
-			<%= f.label :body, "Comment:" %>
-			<%= f.text_area :body %>
-		</div>
+	<section class="comment">
+		<h3>Comments</h3>
+			<div>
+				<% @post.comments.each do |c| %>
+					<div>
+						<p><%= c.body %> (added: <%= c.date_added %>)</p>
+					</div>
+				<% end %>
+			</div>
+	</section>
 
-		<%= f.submit "Add a comment" %>
-	<% end %>
-</section>
-<h1>test!</h1>
-<%= link_to "Post", user_posts_path %>
+	<section>
+		<h3>Add a new comment</h3>
+		<%= form_for [@post.user, @post, @comment] do |f| %>
+			<div>
+				<%= f.label :body, "Comment:" %>
+				<%= f.text_area :body %>
+			</div>
+
+			<%= f.submit "Add a comment" %>
+		<% end %>
+	</section>
+
+	<h1>test!</h1>
+	<%= link_to "Post", user_posts_path %>
 
 </div>

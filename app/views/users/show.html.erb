@@ -1,20 +1,28 @@
 <div class="margin">
 	<div class="show">
-<h1> Welcome to <%= @user.firstname %>'s page</h1>
-<H2>Here are my info:</H2>
+		<h1> Welcome to <%= @user.firstname %>'s page</h1>
+		<H2>Here are my info:</H2>
 
-		<%= image_tag(@user.image_url(:full)) %><br>
-		<%= @user.firstname %> <%= @user.lastname %><br>
-		<%= @user.address %><br>
-		<%= @user.city %>, <%= @user.state %>  <%= @user.zip %><br>
-		<%= @user.email %><br>
-			<div>
-			</div>
+			<%= image_tag(@user.image_url(:full)) %><br>
+			<%= @user.firstname %> <%= @user.lastname %><br>
+			<%= @user.address %><br>
+			<%= @user.city %>, <%= @user.state %>  <%= @user.zip %><br>
+			<%= @user.email %><br>
 
-		<br>
+			<br>
 
+		<ul class="user-post-show">
+			<% @user.posts.each do |u| %>
+				<li>
+					<%= link_to u.title, user_post_path(@user, u) %>
+				</li>
+			<% end %> 
+		</ul>			
+			
+		<% if current_user == @user %>
+			<%= link_to "Post", user_posts_path(@user) %>
+			<%= link_to "Edit", edit_user_path %>
+		<% end %>
 		
-<%= link_to "Post", user_posts_path(@user) %>
-<%= link_to "Edit", edit_user_path %>
-</div>
+	</div>
 </div>

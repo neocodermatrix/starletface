@@ -1,67 +1,69 @@
 <div class="margin">
-<h1>Sign Up</h1>
+	<h1>Sign Up</h1>
 
-<ul>
-<% @user.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-<% end %>
+		<ul>
+			<% @user.errors.full_messages.each do |msg| %>
+			    <li><%= msg %></li>
+			<% end %>
 
-</ul>
+		</ul>
 
 
-<%= form_for @user do |u| %>
+		<%= form_for @user do |u| %>
 
-	<div class="labels">
-		<%= u.label :firstname, "First Name:" %>
-		<%= u.text_field :firstname %>
-	</div>
+			<div class="labels">
+				<%= u.label :firstname, "First Name:" %>
+				<%= u.text_field :firstname %>
+			</div>
 
-	<div>
-		<%= u.label :lastname, "Last Name:" %>
-		<%= u.text_field :lastname %>
-	</div>
+			<div>
+				<%= u.label :lastname, "Last Name:" %>
+				<%= u.text_field :lastname %>
+			</div>
 
-	<div>
-		<%= u.label :email, "Email:" %>
-		<%= u.text_field :email %>
-	</div>
+			<div>
+				<%= u.label :email, "Email:" %>
+				<%= u.text_field :email %>
+			</div>
 
-	<div>
-		<%= u.label :address, "Address:" %>
-		<%= u.text_field :address %>
-	</div>
+			<div>
+				<%= u.label :address, "Address:" %>
+				<%= u.text_field :address %>
+			</div>
 
-	<div>
-		<%= u.label :city, "City:" %>
-		<%= u.text_field :city %>
-	</div>
+			<div>
+				<%= u.label :city, "City:" %>
+				<%= u.text_field :city %>
+			</div>
 
-	<div>
-		<%= u.label :state, "State:" %>
-		<%= u.text_field :state %>
-	</div>
+			<div>
+				<%= u.label :state, "State:" %>
+				<%= u.text_field :state %>
+			</div>
 
-	<div>
-		<%= u.label :zip, "Zip:" %>
-		<%= u.text_field :zip %>
-	</div>
+			<div>
+				<%= u.label :zip, "Zip:" %>
+				<%= u.text_field :zip %>
+			</div>
 
-	<div>
-		<%= u.label :password %>
-		<%= u.password_field :password %>
-	</div>
+			<div>
+				<%= u.label :password %>
+				<%= u.password_field :password %>
+			</div>
 
-    <div>
-        <%= u.label :password_confirmation %>
-        <%= u.password_field :password_confirmation %>
-    </div>
+		    <div>
+		        <%= u.label :password_confirmation %>
+		        <%= u.password_field :password_confirmation %>
+		    </div>
 
-	<%= u.file_field :image %>
-	<br>
-	<br>
-	<%= u.submit "Add New User" %>
+			<%= u.file_field :image %>
+			
+			<br>
+			<br>
 
-<% end %>
+			<%= u.submit "Add New User" %>
+
+		<% end %>
 
 
 </div>
